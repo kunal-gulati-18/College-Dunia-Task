@@ -373,7 +373,7 @@ fieldset, label { margin: 0; padding: 0; }
 
 
 .shape:before {
-  right: 9.2%;
+    right: 10.2%;
     top: 62%;
     border-style: solid;
     border-image: initial;
@@ -386,38 +386,6 @@ fieldset, label { margin: 0; padding: 0; }
     border-width: 10px;
     
 }
-
-.shape1
-{
-  background-color: #dd1c26;
-  border-top-right-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
-  margin-left: 11.1em;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 11px;
-  padding: 3px;
-  width: 2em;
-}
-
-
-
-
-.shape1:before {
-  right: 9.2%;
-  top: 69.5%;
-  border: solid transparent;
-  content: " ";
-  height: 0px;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(0, 128, 0, 0);
-  border-right-color: #dd1c26;
-  border-width: 10px;
-  margin-top: -25px;
-}
-
 
 .jq-ry-container
 {
@@ -452,7 +420,7 @@ fieldset, label { margin: 0; padding: 0; }
 }
 
 .shape:before {
-  right: 12.2%;
+  right: 13.2%;
   top: 62.8%;
   border-style: solid;
   border-image: initial;
