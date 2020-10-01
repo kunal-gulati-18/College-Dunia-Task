@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/ajax-utils.js"></script>  
+        <script src="js/main.js"></script>
+    </head>
+   
+    
+
+<body onload="$dc.loadcollegedata()" onscroll="$dc.infinitescroll()">
+
+    <div class="text-upper">
+        Colleges in North India
+    </div>
+    
+    <div class="grid-container">
+  
+    </div>
+
+<script>
+    $(document).on("mouseover mousewheel DOMMouseScroll load", ".ratings", function() {
+    
+     
+     $.getJSON("data/colleges.json", function( data ) {
+    
+    
+    for(var i=0;i<data['colleges'].length;i++)
+    {
+      if(data['colleges'][i].rating==1)
+      {
+        document.querySelectorAll('#star1').checked="true";
+
+      }
+      if(data['colleges'][i].rating==2)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        
+      }
+      if(data['colleges'][i].rating==3)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        
+      }
+      if(data['colleges'][i].rating==4)
+      {
+        document.querySelectorAll('#star1').checked="true";
+        document.getElementById('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        document.getElementById('star4').checked="true";
+       
+      }
+      if(data['colleges'][i].rating==5)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        document.getElementById('star4').checked="true";
+        document.getElementById('star5').checked="true";
+        
+      }
+    }
+  });
+});
+
+setTimeout(function () {
+
+  $.getJSON("data/colleges.json", function( data ) {
+    
+    
+    for(var i=0;i<data['colleges'].length;i++)
+    {
+      if(data['colleges'][i].rating==1)
+      {
+        document.querySelectorAll('#star1').checked="true";
+
+      }
+      if(data['colleges'][i].rating==2)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        
+      }
+      if(data['colleges'][i].rating==3)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        
+      }
+      if(data['colleges'][i].rating==4)
+      {
+        document.querySelectorAll('#star1').checked="true";
+        document.querySelectorAll('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        document.getElementById('star4').checked="true";
+       
+      }
+      if(data['colleges'][i].rating==5)
+      {
+        document.getElementById('star1').checked="true";
+        document.getElementById('star2').checked="true";
+        document.getElementById('star3').checked="true";
+        document.getElementById('star4').checked="true";
+        document.getElementById('star5').checked="true";
+        
+      }
+    }
+  });
+  
+  
+}, 1000)
+
+  </script>
+</body>
+
+</html>
